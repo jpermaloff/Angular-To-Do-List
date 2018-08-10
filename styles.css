@@ -1,0 +1,92 @@
+* {
+Font-family: 'Open Sans';
+Font-weight: 300;
+}
+body {
+    background: linear-gradient(to right, #f857a6, #ff5858);
+}
+.container {
+    background-color: white;
+    border-radius: 5px;
+    width: 35%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    margin-top: 3%;
+}
+h1 {
+    font-size: 50px;
+    padding-top: 30px;
+    margin: 0;
+}
+h2{
+    margin: 5px;
+}
+.header {
+    margin-left: 15px;
+}
+li {
+    padding: 10px; 
+}
+li:hover {
+    background-color: #bbb;
+    border-radius: 5px;
+}
+ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-left: 5%;
+}
+.completed {
+    text-decoration: line-through;
+}
+#close {
+    position: absolute;
+    right: 25px;
+}
+#close:hover {
+    color: #ff0000;
+
+}
+.completeBtn {
+    background-color: white;
+    color: #ff69b4;
+    border: 1.5px solid #ff69b4;
+    margin-right: 20px;
+    padding: 2.5px;
+}
+button, input {
+   border-radius: 5px;
+}
+input {
+    color: #eee;
+    border: 1px solid #bbb;
+}
+input::placeholder {
+    color: #bbb;
+    font-size: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, .addBtn {
+    width: 93%;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.addBtn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.addBtn:hover {
+    background-color: #ff1493
+}

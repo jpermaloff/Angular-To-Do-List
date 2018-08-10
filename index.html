@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do Lab</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section ng-controller="TodoController as object" class="container">
+        <section class="header">
+            <h1>TODO List</h1>
+            <h2>A place to store the things you have to do!</h2>
+        </section>
+        <form>
+            <input type="text" placeholder="Filter your to-dos">
+        </form>
+        <ol>
+            <li ng-repeat="item in object.todoObjects track by $index" ng-class="{completed:item.completed}">
+                <button ng-if="item.completed === false" class="completeBtn">Complete</button>{{item.task}}
+                <i class="material-icons" id="close">clear</i>
+            </li>
+        </ol>
+        <form>
+            <input type="text" placeholder="Add your to do">
+            <button class="addBtn">Add</button>
+        </form>
+    </section>
+
+
+
+
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src="module.js"></script>
+    <script src="ctrl.js"></script>
+</body>
+
+</html>
