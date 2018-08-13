@@ -46,7 +46,7 @@ ol {
     position: absolute;
     right: 25px;
 }
-#close:hover {
+li:hover #close {
     color: #ff0000;
 
 }
@@ -61,7 +61,6 @@ button, input {
    border-radius: 5px;
 }
 input {
-    color: #eee;
     border: 1px solid #bbb;
 }
 input::placeholder {

@@ -18,17 +18,17 @@
             <h2>A place to store the things you have to do!</h2>
         </section>
         <form>
-            <input type="text" placeholder="Filter your to-dos">
+            <input type="text" placeholder="Filter your to-dos" ng-model="filterText">
         </form>
         <ol>
-            <li ng-repeat="item in object.todoObjects track by $index" ng-class="{completed:item.completed}">
-                <button ng-if="item.completed === false" class="completeBtn">Complete</button>{{item.task}}
-                <i class="material-icons" id="close">clear</i>
+            <li ng-repeat="item in object.todoObjects | filter : filterText track by $index" ng-class="{completed:item.completed}">
+                <button ng-click="object.completeTask($index)" ng-if="item.completed === false" class="completeBtn">Complete</button>{{item.task}}
+                <i ng-click="object.removeTask($index)" class="material-icons" id="close">clear</i>
             </li>
         </ol>
         <form>
-            <input type="text" placeholder="Add your to do">
-            <button class="addBtn">Add</button>
+            <input type="text" placeholder="Add your to do" ng-model="newTask">
+            <button class="addBtn" ng-click="object.addTask(newTask);">Add</button>
         </form>
     </section>
 

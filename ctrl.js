@@ -1,6 +1,5 @@
 "use strict";
 
-
 function TodoController() {
     const vm = this;
     vm.todoObjects = [
@@ -18,13 +17,25 @@ function TodoController() {
         },
         {
             task: "Cut Grass",
-            completed: true
+            completed: false
         },
         {
-            task: "Clean House",
+            task: "Wash Dog",
             completed: false
         }
     ];
+vm.completeTask = (index) => {
+vm.todoObjects[index].completed = true
+}
+vm.removeTask = (index) => {
+    vm.todoObjects.splice(index, 1)
+}
+vm.addTask= (newTask) => {
+   vm.todoObjects.push({
+       task: newTask,
+       completed: false
+   });
+};
 };
 
 angular
